@@ -5,10 +5,31 @@
  */
 package PigCoin;
 
+import java.security.KeyPair;
+import java.security.PrivateKey;
+import java.security.PublicKey;
 /**
  *
  * @author aliena
  */
 public class Wallet {
+    private PrivateKey SK;
+    private PublicKey Address;
+
+    public PrivateKey getPK() {
+        return SK;
+    }
+
+    public void setSK(PrivateKey SK) {
+        this.SK = SK;
+    }
+
+    public PublicKey getAddress() {
+        return Address;
+    }
+
+    public void setAddress(PublicKey Address) {
+        this.Address = Address;
+    }
     
 }

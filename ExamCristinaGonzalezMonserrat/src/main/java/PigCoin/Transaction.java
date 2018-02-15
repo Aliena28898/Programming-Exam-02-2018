@@ -5,10 +5,10 @@
  */
 package PigCoin;
 
+
 /**
  *
  * @author aliena
  */
 public class Transaction {
-    
 }
