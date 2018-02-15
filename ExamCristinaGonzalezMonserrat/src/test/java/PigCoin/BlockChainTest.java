@@ -38,6 +38,9 @@ public class BlockChainTest {
     }
 
     /**
+     * Tests de la historia de usuario 5.
+     */
+    /**
      * Test of addOrigin method, of class BlockChain.
      */
     @Test
@@ -51,6 +54,25 @@ public class BlockChainTest {
         BlockChain instance = new BlockChain();
         instance.addOrigin(trx);
         assert(instance.getBlockChain().size() > 0);
+    }
+    
+    /**
+     * Tests de la historia de usuario 6.
+     */
+    /**
+     * Test of summarize method, of class BlockChain.
+     */
+    @Test
+    public void testSummarize() {
+        System.out.println("addOrigin");
+        Wallet origin = new Wallet();
+        origin.generateKeyPair();
+        Wallet wallet_1 = new Wallet();
+        wallet_1.generateKeyPair();
+        Transaction trx = new Transaction("hash_1", "0", origin.getAddress(), wallet_1.getAddress(), 20, "bacon eggs");
+        BlockChain instance = new BlockChain();
+        instance.addOrigin(trx);
+        assert(instance.summarize().length() > 0);
     }
     
 }

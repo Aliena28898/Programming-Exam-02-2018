@@ -15,11 +15,22 @@ public class BlockChain {
     private ArrayList <Transaction> blockChain = new ArrayList<>();
     
     
+    
+    
     public ArrayList <Transaction> getBlockChain(){
         return this.blockChain;
     }
     
     public void addOrigin(Transaction transaction){
         blockChain.add(transaction);
+    }
+    
+    
+    public String summarize(){
+        String s = "";
+        for(Transaction trans : this.getBlockChain()){
+            s = s + trans.toString();
+        }
+        return s;
     }
 }

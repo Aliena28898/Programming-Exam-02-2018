@@ -1,0 +1,4 @@
+El sistema debe poder mostrar una representación en formato String del BlockChain.
+
+Tests:
+-El String que represente el blckchain no debe estar vacío.
