@@ -1,0 +1,4 @@
+El sistema debe poder sacar, a partir del blockchain, todas las transacciones de entrada y de salida de una wallet.
+
+Tests:
+-Tras añadir 3 transacciones al blockchain, se comprueba que tras los cálculos las listas de transacciones de entrad y salida de la wallet no están vacías.

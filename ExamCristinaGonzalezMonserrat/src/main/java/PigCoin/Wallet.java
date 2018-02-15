@@ -85,6 +85,14 @@ public class Wallet {
         this.setSK(pair.getPrivate());
         this.setAddress(pair.getPublic());
     }
+    
+    public void addInputTransaction(Transaction t){
+        this.inputTransactions.add(t);
+    }
+    
+    public void addOutputTransaction(Transaction t){
+        this.outputTransactions.add(t);
+    }
 
     public void loadCoins(BlockChain bChain) {
 
@@ -107,6 +115,22 @@ public class Wallet {
         this.setBalance(totalin-totalout);
     }
 
+    public void loadInputTransactions(BlockChain bChain){
+        for (Transaction in : bChain.getBlockChain()) {
+            if (in.getpKey_recipient() == this.getAddress()) {
+                this.addInputTransaction(in);
+            }
+        }
+    }
+    
+    public void loadOutputTransactions(BlockChain bChain){
+        for (Transaction out : bChain.getBlockChain()) {
+            if (out.getpKey_sender() == this.getAddress()) {
+                this.addOutputTransaction(out);
+            }
+        }
+    }
+    
     @Override
     public String toString() {
         String s = ""

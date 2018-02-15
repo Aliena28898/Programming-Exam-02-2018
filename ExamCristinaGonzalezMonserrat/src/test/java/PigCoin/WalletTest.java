@@ -153,4 +153,33 @@ public class WalletTest {
         assert(instance.getTotal_output() == 20);
         assert(instance.getBalance() == 10);
     }
+    
+    /**
+     * Tests de la historia de usuario 9.
+     */
+    
+    /**
+     * Test of loadInputTransactions and loadOutputTransactions methods, of class Wallet.
+     */
+    @org.junit.Test
+    public void testLoadImputOutput() {
+        System.out.println("loadCoins");
+        Wallet instance = new Wallet();
+        instance.generateKeyPair();
+        Wallet origin = new Wallet();
+        origin.generateKeyPair();
+        BlockChain bc = new BlockChain();
+        Transaction trx = new Transaction("hash_1", "0", origin.getAddress(), instance.getAddress(), 20, "bacon eggs");
+        bc.addOrigin(trx);
+        trx = new Transaction("hash_2", "1", origin.getAddress(), instance.getAddress(), 10, "spam spam spam");
+        bc.addOrigin(trx);
+        trx = new Transaction("hash_3", "hash_1", instance.getAddress(), origin.getAddress(), 20, "a flying pig!");
+        bc.addOrigin(trx);
+        
+        instance.loadInputTransactions(bc);
+        instance.loadOutputTransactions(bc);
+        
+        assert(instance.getInputTransactions().size() > 0);
+        assert(instance.getOutputTransactions().size() > 0);
+    }
 }
