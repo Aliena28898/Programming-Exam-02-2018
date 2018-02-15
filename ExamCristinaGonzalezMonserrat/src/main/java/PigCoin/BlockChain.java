@@ -5,10 +5,21 @@
  */
 package PigCoin;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author aliena
  */
 public class BlockChain {
+    private ArrayList <Transaction> blockChain = new ArrayList<>();
     
+    
+    public ArrayList <Transaction> getBlockChain(){
+        return this.blockChain;
+    }
+    
+    public void addOrigin(Transaction transaction){
+        blockChain.add(transaction);
+    }
 }

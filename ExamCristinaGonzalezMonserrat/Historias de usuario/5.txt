@@ -1,0 +1,4 @@
+El sistema debe crear el BlockChain y añadirle las transacciones iniciales.
+
+Tests:
+-Tras crear y añadir una transacción inicial al blockChain, éste no debe estar vacío.
