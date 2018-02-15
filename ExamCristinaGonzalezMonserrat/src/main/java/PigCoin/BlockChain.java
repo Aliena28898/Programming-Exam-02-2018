@@ -31,6 +31,13 @@ public class BlockChain {
         for(Transaction trans : this.getBlockChain()){
             s = s + trans.toString();
         }
+        System.out.println(s); 
+        return s;
+    }
+    
+    public String summarize(int index){
+        String s = this.getBlockChain().toArray()[index].toString();
+        System.out.println(s);
         return s;
     }
 }

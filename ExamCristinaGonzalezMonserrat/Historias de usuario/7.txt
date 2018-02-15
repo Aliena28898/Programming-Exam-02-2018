@@ -1,0 +1,4 @@
+El sistema debe poder mostrar una representación en formato String de la transacción en una posición concreta del BlockChain.
+
+Tests:
+-Tras añadir 3 transacciones al blockchain, el string que represente cada una de las transacciones no debe estar vacío.
