@@ -109,4 +109,19 @@ public class WalletTest {
         assertNotNull(instance.getAddress()); //test if Address is not null
     }
     
+    /**
+     * Tests de la historia de usuario 3.
+     */
+    
+    /**
+     * Test of generateKeyPair method, of class Wallet.
+     */
+    @org.junit.Test
+    public void testToString() {
+        System.out.println("toString");
+        Wallet instance = new Wallet();
+        instance.generateKeyPair();
+        
+        assertNotNull(instance.toString()); //test if string representation of instance is not null
+    }
 }

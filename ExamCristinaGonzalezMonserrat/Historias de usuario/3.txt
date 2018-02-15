@@ -1,0 +1,4 @@
+Se debe poder representar una cartera mediante un String, que contendrá su clave pública, imput total, output total y balance de PigCoins.
+
+Tests:
+-El método que crea la representación en String no debe devolver nulo.
