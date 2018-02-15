@@ -1,0 +1,4 @@
+El sistema debe poder calcular, a partir del blockchain, los pigcoins totales que han entrado en una wallet, los pigcoins totales que han salido y el balance final.
+
+Tests:
+-Tras añadir 3 transacciones al blockchain, se comprueba que tras los cálculos los bitcoins de entrada, los de salida y el balance total son la cifra correcta.
