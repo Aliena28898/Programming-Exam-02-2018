@@ -1,0 +1,4 @@
+El programa debe ser capaz de crear una nueva cartera (wallet) y asignarle una clave pública y una clave privada (Address y PK).
+
+Tests:
+-Los setters y getters de Address y PK deben funcionar correctamente.

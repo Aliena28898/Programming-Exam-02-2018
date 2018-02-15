@@ -1,0 +1,4 @@
+Una cartera debe poder asignarse sus dos claves.
+
+Tests:
+-El método para obtener y asignar las claves de una cartera debe funcionar correctamente.

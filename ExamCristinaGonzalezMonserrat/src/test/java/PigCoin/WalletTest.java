@@ -5,6 +5,7 @@
  */
 package PigCoin;
 
+import java.security.KeyPair;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 import org.junit.After;
@@ -48,11 +49,11 @@ public class WalletTest {
      * Test of getPK method, of class Wallet.
      */
     @org.junit.Test
-    public void testGetPK() {
-        System.out.println("getPK");
+    public void testGetSK() {
+        System.out.println("getSK");
         Wallet instance = new Wallet();
         PrivateKey expResult = null;
-        PrivateKey result = instance.getPK();
+        PrivateKey result = instance.getSK();
         assertEquals(expResult, result);
     }
 
@@ -88,6 +89,24 @@ public class WalletTest {
         PublicKey Address = null;
         Wallet instance = new Wallet();
         instance.setAddress(Address);
+    }
+    
+    
+    /**
+     * Tests de la historia de usuario 2.
+     */
+    
+    /**
+     * Test of generateKeyPair method, of class Wallet.
+     */
+    @org.junit.Test
+    public void testGenerateKeyPair() {
+        System.out.println("generateKeyPair");
+        Wallet instance = new Wallet();
+        instance.generateKeyPair();
+        
+        assertNotNull(instance.getSK()); //test if SK is not null
+        assertNotNull(instance.getAddress()); //test if Address is not null
     }
     
 }

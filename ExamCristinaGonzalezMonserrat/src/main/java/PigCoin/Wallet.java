@@ -16,7 +16,7 @@ public class Wallet {
     private PrivateKey SK;
     private PublicKey Address;
 
-    public PrivateKey getPK() {
+    public PrivateKey getSK() {
         return SK;
     }
 
@@ -30,6 +30,12 @@ public class Wallet {
 
     public void setAddress(PublicKey Address) {
         this.Address = Address;
+    }
+    
+    public void generateKeyPair(){
+        KeyPair pair = GenSig.generateKeyPair();
+        this.setSK(pair.getPrivate());
+        this.setAddress(pair.getPublic());
     }
     
 }
