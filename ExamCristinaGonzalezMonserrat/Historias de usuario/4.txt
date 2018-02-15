@@ -1,0 +1,4 @@
+Se debe poder crear una transacción y representarla mediante un string.
+
+Tests: 
+-Los getters, setters, y el método toString de la Transacción funcionan correctamente.
